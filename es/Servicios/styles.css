@@ -94,18 +94,42 @@ nav ul li a {
 }
 
 .services {
+    background: url('../../img/fondo.jpg') no-repeat center center/cover;
+    overflow: hidden;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 20px;
     padding: 20px;
 }
 
+/*sssssssssssssssssssssssssssssss*/
+.services {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
 .service {
     background-color: rgba(255, 255, 255, 0.1);
+    background-color: rgb(0, 0, 0, 0.8);
     padding: 20px;
     border: 1px solid white;
     border-radius: 10px;
     text-align: center;
+}
+
+/*************************************/
+
+.service {
+    flex: 0 0 calc(25% - 20px); /* Máximo 4 servicios por fila */
+    margin-bottom: 40px;
+    padding: 0 10px;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+.img-cont{
+    overflow: hidden;
 }
 
 .service img {
@@ -113,6 +137,14 @@ nav ul li a {
     height: auto;
     border-radius: 10px;
     margin-bottom: 15px;
+}
+
+.service img {
+    transition: transform 0.5s ease-in-out; /* Añadimos transición al cambio de tamaño */
+}
+
+.service img:hover {
+    transform: scale(1.08); /* Hacemos que la imagen se agrande un 5% al pasar el cursor sobre ella */
 }
 
 .service h2 {
@@ -135,6 +167,13 @@ footer p {
     color: white;
     text-decoration: none;
 }
+
+@media(max-width: 1024px){
+    .service {
+        flex: 0 0 calc(50% - 20px); /* Máximo 2 servicios por fila en dispositivos pequeños */
+    }
+}
+
 
 @media (max-width: 768px) {
     header {
@@ -209,4 +248,10 @@ footer p {
     .service p {
         font-size: 0.9em;
     }
+
+    .service {
+        flex: 0 0 calc(100% - 20px); /* Un servicio por fila en dispositivos extra pequeños */
+    }
+
+
 }
