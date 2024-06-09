@@ -94,7 +94,8 @@ nav ul li a {
 }
 
 .services {
-    background: url('../../img/fondo.jpg') no-repeat center center/cover;
+    background: url('../../img/fondo_servicio.png') no-repeat center center/cover;
+    /*background-color: rgb(32, 32, 32);*/
     overflow: hidden;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
