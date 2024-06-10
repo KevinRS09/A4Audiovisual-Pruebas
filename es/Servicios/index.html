@@ -4,8 +4,92 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Artes Audiovisuales Avanzadas - Servicios</title>
-    <link rel="stylesheet" href="./styles.css">
+    <link rel="stylesheet" href="../../css/styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        .services {
+            background: url('../../img/fondo_servicio.png') no-repeat center center/cover;
+            overflow: hidden;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            padding: 20px;
+        }
+        
+        .services {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+        
+        .service {
+            background-color: rgba(255, 255, 255, 0.1);
+            background-color: rgb(0, 0, 0, 0.8);
+            padding: 20px;
+            border: 1px solid white;
+            border-radius: 10px;
+            text-align: center;
+            flex: 0 0 calc(25% - 20px); /* Máximo 4 servicios por fila */
+            margin-bottom: 40px;
+            padding: 0 10px;
+            box-sizing: border-box;
+            overflow: hidden;
+            transition: transform 0.5s ease-in-out; /* Añadimos transición al cambio de tamaño */
+            cursor: pointer;
+        }
+        
+        .img-cont {
+            overflow: hidden;
+        }
+        
+        .service img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+            margin-bottom: 15px;
+        }
+        
+        .service:hover {
+            transform: scale(1.03);
+        }
+        
+        .service h2 {
+            font-size: 1.5em;
+            margin: 15px 0;
+        }
+        
+        @media (max-width: 1024px) {
+            .service {
+                flex: 0 0 calc(50% - 20px); 
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .service {
+                margin-bottom: 30px;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .service img {
+                margin-bottom: 10px;
+            }
+        
+            .service h2 {
+                font-size: 1.3em;
+                margin: 10px 0;
+            }
+        
+            .service p {
+                font-size: 0.9em;
+            }
+        
+            .service {
+                flex: 0 0 calc(100% - 20px);
+            }
+        }
+        </style>
+        
 </head>
 <body>
     <header>
@@ -27,9 +111,9 @@
         <div class="language-selector">
             <img src="../../img/es.png" alt="Idioma Español" id="language-button">
             <div class="dropdown">
-                <a href="../../en/"><img src="../../img/en.png" alt="English" id="en-button" class="dropdown-item"></a>
-                <a href="../../es/"><img src="../../img/es.png" alt="Español" id="es-button" class="dropdown-item"></a>
-                <a href="../../fr/"><img src="../../img/fr.png" alt="Français" id="fr-button" class="dropdown-item"></a>
+                <a href="./"><img src="./img/en.png" alt="English" id="en-button" class="dropdown-item"></a>
+                <a href="./"><img src="./img/es.png" alt="Español" id="es-button" class="dropdown-item"></a>
+                <a href="./"><img src="./img/fr.png" alt="Français" id="fr-button" class="dropdown-item"></a>
             </div>
         </div>
     </header>
@@ -78,13 +162,13 @@
         </section>
     </main>
     <footer>
-        <p>&copy; 2024 Academia de Artes Audiovisuales Avanzadas. Todos los derechos reservados.</p>
+        <p>&copy; 2024 Artes Audiovisuales Avanzadas. Todos los derechos reservados.</p>
         <div class="social-links">
             <a href="https://facebook.com" target="_blank">Facebook</a>
             <a href="https://instagram.com" target="_blank">Instagram</a>
             <a href="https://twitter.com" target="_blank">Twitter</a>
         </div>
     </footer>
-    <script src="./scripts.js"></script>
+    <script src="../../js/scripts.js"></script>
 </body>
 </html>

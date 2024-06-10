@@ -27,6 +27,7 @@ header {
 .logo-image {
     width: 50px;
     height: 50px;
+    padding-right: 10px;
 }
 
 nav {
@@ -140,12 +141,13 @@ nav ul li a {
     margin-bottom: 15px;
 }
 
-.service img {
+.service {
     transition: transform 0.5s ease-in-out; /* Añadimos transición al cambio de tamaño */
+    cursor: pointer;
 }
 
-.service img:hover {
-    transform: scale(1.08); /* Hacemos que la imagen se agrande un 5% al pasar el cursor sobre ella */
+.service:hover {
+    transform: scale(1.03); /* Hacemos que la imagen se agrande un 5% al pasar el cursor sobre ella */
 }
 
 .service h2 {
